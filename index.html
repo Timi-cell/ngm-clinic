@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NGM Clinic</title>
+    <link rel="icon" href="./images/ngmc.jpg" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8725ddc164.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="flexing">
+      <a href="#">
+        <h1>NGMC</h1>
+      </a>
+      <nav class="flexing">
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a id="booking" href="#book_appointment">Book Appointment</a>
+      </nav>
+    </header>
+
+    <!-- hero & banner section -->
+    <main class="flexing">
+      <section class="intro">
+        <h2>
+          Welcome To
+          <p id="nextgenmed">NextGen Medics</p>
+          Clinic
+        </h2>
+        <p>Providing support to ensure healthy pregnancies</p>
+        <button>Book Appointment</button>
+      </section>
+
+      <img src="./images/header.svg" alt="Banner Image" />
+    </main>
+
+    <!-- about us section -->
+    <section id="about">
+      <article class="flexing bg about_us dim-dark-color">
+        <aside id="about_us_content">
+          <h2>About Us</h2>
+          <p>
+            At NextGen Medics Clinic, we are dedicated to supporting women and
+            families through every stage of pregnancy and beyond. Our mission is
+            to ensure healthier pregnancies, safer deliveries, and confident
+            parenting through compassionate care and expert guidance. <br />
+            <br/ > Beyond clinical services, we believe in empowering families
+            with knowledge, offering educational resources, counseling, and
+            community programs designed to make the journey to parenthood less
+            overwhelming and more joyful. <br />
+            <br />
+            Your health and your baby’s future are at the heart of everything we
+            do. Together, we’re building healthier generations, one pregnancy at
+            a time
+          </p>
+        </aside>
+        <img src="./images/about_us.jpg" alt="About Us Image" />
+      </article>
+    </section>
+
+    <!-- services section -->
+    <section id="services">
+      <div class="bg dim-dark-color services">
+        <h2>Our Services</h2>
+        <p>
+          At NextGen Medics Clinic, we provide comprehensive care and convenient
+          support to make your pregnancy journey smooth and reassuring.
+        </p>
+        <div class="container">
+          <article>
+            <h3>Qualified Doctors</h3>
+            <p>
+              Our experienced medical team offers expert guidance and
+              compassionate care tailored to your needs.
+            </p>
+          </article>
+          <article>
+            <h3>Private Support</h3>
+            <p>
+              We ensure a confidential and comfortable environment where you
+              feel safe to discuss every concern.
+            </p>
+          </article>
+          <article>
+            <h3>24/7 Service</h3>
+            <p>
+              Around-the-clock assistance for urgent questions or care, because
+              your health doesn’t keep office hours.
+            </p>
+          </article>
+          <article>
+            <h3>Online Booking</h3>
+            <p>
+              Schedule visits easily through our user-friendly online platform.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="./images/gallery1.jpg" alt="Gallery Image 1" />
+        <img src="./images/gallery2.jpg" alt="Gallery Image 2" />
+        <img src="./images/gallery3.jpg" alt="Gallery Image 3" />
+      </div>
+    </section>
+
+    <!-- testimonials section -->
+    <section id="testimonials">
+      <div class="bg dim-dark-color testimonials">
+        <h2>What Our Patients Say</h2>
+        <div class="carousel-track">
+          <div class="testimonial fade">
+            <blockquote>
+              "NextGen Medics Clinic made my first pregnancy journey
+              stress-free. The doctors explained every step and always reassured
+              me. I felt truly cared for.”
+              <footer>- Chiamaka Okafor.</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial fade">
+            <blockquote>
+              “My wife and I are grateful for the private support we received.
+              The team was professional yet warm, and their 24/7 availability
+              gave us peace of mind.”
+              <footer>- Ibrahim Yusuf.</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial fade">
+            <blockquote>
+              “As a first-time mom, I had many questions. The online booking and
+              flexible appointments made it easy for me to keep up with my
+              check-ups without stress.”
+              <footer>- Funke Adeyemi.</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial fade">
+            <blockquote>
+              “The clinic combines modern facilities with genuine compassion.
+              From the reception to the doctors, everyone treated us like
+              family.”
+              <footer>- Emeka Nwosu.</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial fade">
+            <blockquote>
+              “I recommend NextGen Medics to every expectant mother. Their
+              guidance and follow-up even after delivery showed how much they
+              care about healthy families.”
+              <footer>- Aisha Ndama.</footer>
+            </blockquote>
+          </div>
+          <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        </div>
+        <!-- <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+         <span class="dot" onclick="currentSlide(4)"></span>
+         <span class="dot" onclick="currentSlide(5)"></span>
+      </div> -->
+      </div>
+    </section>
+
+    <!-- book appointment section -->
+    <section id="book_appointment">
+      <div class="book_appointment dim-dark-color bg">
+        <h2>Book Appointment</h2>
+        <div class="flexing book-container">
+          <div class="form-container">
+            <form>
+              <label for="fname">First Name</label>
+              <input
+                required
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your first name..."
+              />
+              <label for="lname">Last Name</label>
+              <input
+                required
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name..."
+              />
+              <label for="email">Email</label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email..."
+              />
+              <label for="phone">Phone Number</label>
+              <input
+                required
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number..."
+              />
+              <label for="date">Choose Date</label>
+              <input
+                required
+                type="date"
+                id="date"
+                name="date"
+                placeholder="Select a date..."
+              />
+              <label for="time">Choose Time</label>
+              <input
+                required
+                type="time"
+                id="time"
+                name="time"
+                placeholder="Select a time..."
+              />
+              <label for="subject">Reason For Appointment</label>
+              <textarea
+                required
+                id="subject"
+                name="subject"
+                placeholder="Let us know why you're booking this appointment..."
+                style="height: 200px"
+              ></textarea>
+              <input type="submit" value="Book Appointment" />
+            </form>
+          </div>
+          <img src="./images/booking.jpg" alt="Calendar Image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer--content footer--column">
+        <div class="first">
+          <a href="#">
+            <h1>NGMC</h1>
+          </a>
+        </div>
+        <div class="second">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+        <div class="third">
+          <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#book_appointment">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="fourth">
+          <div class="icons">
+            <a
+              href="https://www.linkedin.com/company/nextgenmedics/"
+              target="_blank"
+              ><i class="fab fa-linkedin icon"></i
+            ></a>
+            <a href="https://x.com/nextgenmedics" target="_blank"
+              ><i class="fab fa-twitter icon"></i
+            ></a>
+            <a href="https://www.instagram.com/thenextgenmedics" target="_blank"
+              ><i class="fab fa-instagram icon"></i
+            ></a>
+          </div>
+          <p>&copy; Copyright 2025 NGMC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

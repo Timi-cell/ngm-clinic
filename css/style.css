@@ -1,0 +1,438 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  /* to make mental math easier so 1rem = 10px */
+  font-size: 62.5%;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.flexing {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+}
+
+header {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #fff;
+  padding: 0 3.5rem;
+  position: fixed;
+  width: 100vw;
+  height: auto;
+}
+
+header.window-scroll {
+  background: #fff;
+}
+header.window-scroll h1 {
+  color: #0c031b;
+}
+
+header.window-scroll a {
+  color: #0c031b;
+}
+header.window-scroll #booking {
+  background-color: #480ca8;
+  color: #fff;
+}
+header h1 {
+  font-size: 3.5rem;
+}
+
+#booking {
+  background-color: #fc5185;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+main img {
+  width: 50%;
+  display: block;
+}
+
+main {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  padding: 10rem 3.5rem 0;
+  color: #fff;
+}
+
+.intro {
+  width: 50%;
+  line-height: 1.5;
+}
+
+.intro h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.intro #nextgenmed {
+  font-size: inherit;
+  display: inline;
+  color: #fc5185;
+}
+.intro p {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro button {
+  background-color: #fc5185;
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  width: auto;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+}
+
+.bg {
+  background: rgba(76, 201, 240, 0.1);
+}
+
+.dim-dark-color {
+  color: rgba(12, 3, 27, 0.7);
+}
+.about_us {
+  flex-direction: row-reverse !important;
+}
+.about_us,
+.services {
+  padding: 5rem 3.5rem;
+  width: 100%;
+}
+
+.about_us h2,
+.services h2,
+.testimonials h2,
+.book_appointment h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about_us p,
+.services p {
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+
+.about_us #about_us_content {
+  width: 50%;
+}
+
+.about_us img {
+  display: inline-block;
+  width: 50%;
+  object-fit: cover;
+  height: 85vh;
+  border-radius: 10px;
+}
+
+.services h2,
+.testimonials h2,
+.book_appointment h2 {
+  text-align: center;
+}
+
+.services > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.services .container article {
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.5);
+  flex-direction: column;
+  gap: 1.5rem;
+  /* height: fit-content; */
+  transition: all 500ms ease-in-out;
+}
+.services .container article:hover {
+  background: #fc5185;
+}
+.services .container article h3 {
+  font-size: 2rem;
+}
+.services .container article p {
+  font-size: 1.5rem;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 3.5rem;
+}
+.carousel-track {
+  height: 100%;
+  /* position: relative; */
+  margin: auto;
+  padding: 3.5rem;
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+}
+
+.testimonial {
+  display: none;
+  margin-top: 2rem;
+}
+.testimonial blockquote {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-style: italic;
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+/* .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2.2rem;
+  padding: 1.6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 0.3rem 0.3rem 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+} */
+
+.testimonials footer {
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  /* padding: 0.8rem 1.2rem;
+  position: absolute;
+  bottom: 0; */
+  /* width: 100%; */
+  text-align: center;
+}
+
+/* .dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 0.2rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+} */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.book_appointment {
+  padding: 5rem 3.5rem;
+  width: 100%;
+}
+
+.book_appointment textarea {
+  resize: none;
+}
+
+.book_appointment .book-container {
+  flex-direction: row-reverse;
+  margin-top: 5rem;
+}
+
+.book_appointment .form-container {
+  width: 50%;
+}
+
+.book_appointment img {
+  width: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+  /* height: 100vh; */
+}
+
+.book_appointment label {
+  font-size: 1.7rem;
+  color: #0c031bcf;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  resize: vertical;
+  font-size: 1.45rem;
+}
+
+input[type="submit"] {
+  background-color: #480ca8;
+  color: white;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: all 0.2s ease-in;
+}
+
+input[type="submit"]:hover {
+  background-color: #fc5185;
+}
+
+/* ------------The Footer Section----------- */
+
+.footer {
+  background: #0c031b;
+  color: #fff;
+  padding: 5rem 3.5rem;
+}
+
+.footer--content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.second a,
+.third a {
+  transition: all 0.2 ease-in;
+}
+
+.second a:hover,
+.third a:hover {
+  text-decoration: underline;
+}
+
+.footer li {
+  list-style: none;
+  font-size: 1.3rem;
+  /* margin-top: 1.2rem;
+  margin-right: 2.3rem; */
+  padding: 1rem;
+}
+
+.fourth .icon {
+  font-size: 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* .icon:hover {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+} */
+.footer p {
+  font-size: 1.2rem;
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 1110px) {
+  .footer--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; gap: 5rem;
+  }
+
+  .footer--column .icons {
+    margin-top: 6rem;
+  }
+
+  .footer--column .icon {
+    font-size: 3rem;
+  }
+  .footer--column .first {
+    width: 100%;
+  }
+
+  .footer--column li {
+    font-size: 1.65rem;
+  }
+
+  .footer--column p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .footer--column .fourth {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* -----------End of the Footer Section-------------- */
