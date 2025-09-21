@@ -27,7 +27,7 @@ body {
 header {
   background: linear-gradient(135deg, #480ca8, #4cc9f0);
   color: #fff;
-  padding: 0 3.5rem;
+  padding: 2rem 3.5rem;
   position: fixed;
   width: 100vw;
   height: auto;
@@ -50,7 +50,9 @@ header.window-scroll #booking {
 header h1 {
   font-size: 3.5rem;
 }
-
+section {
+  scroll-margin-top: 5rem;
+}
 #booking {
   background-color: #fc5185;
   color: #fff;
@@ -117,18 +119,23 @@ main {
 .about_us {
   flex-direction: row-reverse !important;
 }
+
 .about_us,
-.services {
-  padding: 5rem 3.5rem;
+.gallery,
+.services,
+.testimonials,
+.book_appointment {
+  padding: 5rem 3.5rem 0;
   width: 100%;
 }
 
 .about_us h2,
 .services h2,
 .testimonials h2,
+.gallery h2,
 .book_appointment h2 {
   font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .about_us p,
@@ -150,6 +157,7 @@ main {
 }
 
 .services h2,
+.gallery h2,
 .testimonials h2,
 .book_appointment h2 {
   text-align: center;
@@ -189,12 +197,23 @@ main {
 .services .container article p {
   font-size: 1.5rem;
 }
-
+.gallery .gallery-grid {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-content: center;
+  place-items: center;
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: 1rem;
+}
+.gallery .gallery-grid #gallery-image-4 {
+  grid-column: span 2;
+  /* grid-row: span 2; */
+}
 .testimonials {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem 3.5rem;
 }
 .carousel-track {
   height: 100%;
@@ -286,7 +305,7 @@ main {
 }
 
 .book_appointment {
-  padding: 5rem 3.5rem;
+  padding-bottom: 5rem;
   width: 100%;
 }
 
@@ -297,6 +316,7 @@ main {
 .book_appointment .book-container {
   flex-direction: row-reverse;
   margin-top: 5rem;
+  align-items: flex-start;
 }
 
 .book_appointment .form-container {
@@ -334,6 +354,7 @@ textarea {
 }
 
 input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
   background-color: #480ca8;
   color: white;
   padding: 1.2rem 2rem;
@@ -355,7 +376,9 @@ input[type="submit"]:hover {
   color: #fff;
   padding: 5rem 3.5rem;
 }
-
+.footer .first a {
+  color: #fc5185;
+}
 .footer--content {
   display: flex;
   flex-direction: row;
@@ -371,7 +394,8 @@ input[type="submit"]:hover {
 
 .second a:hover,
 .third a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline;  */
+  color: #fc5185;
 }
 
 .footer li {
@@ -384,7 +408,7 @@ input[type="submit"]:hover {
 
 .fourth .icon {
   font-size: 1.5rem;
-  border: 1px solid #fff;
+  border: 1px solid #fc5185;
   border-radius: 50%;
   padding: 1rem;
   cursor: pointer;
@@ -407,7 +431,8 @@ input[type="submit"]:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; gap: 5rem;
+    flex-wrap: wrap;
+    gap: 5rem;
   }
 
   .footer--column .icons {
