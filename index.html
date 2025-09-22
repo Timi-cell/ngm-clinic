@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/ngmc.jpg" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/8725ddc164.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <button
-      class="arrow-up"
-      id="scrollTopBtn"
-      title="Back to top"
-    >
+    <button class="arrow-up" id="scrollTopBtn" title="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -57,7 +54,7 @@
 
     <!-- hero & banner section -->
     <main class="flexing">
-      <section class="intro">
+      <section class="intro" data-aos="fade-right">
         <h2>
           Welcome To
           <p id="nextgenmed">NextGen Medics</p>
@@ -67,11 +64,11 @@
         <button><a href="#book_appointment">Book Appointment</a></button>
       </section>
 
-      <img src="./images/header.svg" alt="Banner Image" />
+      <img src="./images/header.svg" data-aos="fade-down" alt="Banner Image" />
     </main>
 
     <!-- about us section -->
-    <section id="about">
+    <section id="about" data-aos="zoom-in">
       <article class="flexing bg about_us padding dim-dark-color">
         <aside id="about_us_content">
           <h2>About Us</h2>
@@ -103,28 +100,28 @@
           support to make your pregnancy journey smooth and reassuring.
         </p>
         <div class="container">
-          <article>
+          <article data-aos="fade-up">
             <h3>Qualified Doctors</h3>
             <p>
               Our experienced medical team offers expert guidance and
               compassionate care tailored to your needs.
             </p>
           </article>
-          <article>
+          <article data-aos="fade-up">
             <h3>Private Support</h3>
             <p>
               We ensure a confidential and comfortable environment where you
               feel safe to discuss every concern.
             </p>
           </article>
-          <article>
+          <article data-aos="fade-up">
             <h3>24/7 Service</h3>
             <p>
               Around-the-clock assistance for urgent questions or care, because
               your health doesn’t keep office hours.
             </p>
           </article>
-          <article>
+          <article data-aos="fade-up">
             <h3>Online Booking</h3>
             <p>
               Schedule visits easily through our user-friendly online platform.
@@ -143,27 +140,32 @@
           <img
             src="./images/gallery/1.jpg"
             alt="Gallery Image 1"
+            data-aos="zoom-in"
             id="gallery-image-1"
           />
           <img
             src="./images/gallery/2.jpg"
             alt="Gallery Image 2"
+            data-aos="zoom-in"
             id="gallery-image-2"
           />
           <img
             src="./images/gallery/3.jpg"
             alt="Gallery Image 3"
+            data-aos="zoom-in"
             id="gallery-image-3"
           />
           <img
             src="./images/gallery/4.jpg"
             id="gallery-image-4"
             alt="Gallery Image 4"
+            data-aos="zoom-in"
           />
           <img
             src="./images/gallery/5.jpg"
             alt="Gallery Image 5"
             id="gallery-image-5"
+            data-aos="zoom-in"
           />
         </div>
       </div>
@@ -173,7 +175,7 @@
     <section id="testimonials">
       <div class="bg dim-dark-color padding testimonials">
         <h2>What Our Patients Say</h2>
-        <div class="carousel-track">
+        <div class="carousel-track" data-aos="fade-up">
           <div class="testimonial fade">
             <blockquote>
               "NextGen Medics Clinic made my first pregnancy journey
@@ -293,7 +295,7 @@
               <input type="submit" value="Book Appointment" />
             </form>
           </div>
-          <img src="./images/booking.jpg" alt="Calendar Image" />
+          <img src="./images/booking.jpg" data-aos="zoom-in" alt="Calendar Image" />
         </div>
       </div>
     </section>
@@ -339,5 +341,9 @@
       </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
