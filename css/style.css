@@ -523,6 +523,9 @@ input[type="submit"]:hover {
   .header .close-icon {
     display: block;
   }
+  header.window-scroll .menu-icon {
+    color: #480ca8;
+  }
 
   header .menu-content {
     display: none;
