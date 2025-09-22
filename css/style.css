@@ -107,8 +107,13 @@ header.window-scroll #booking:hover {
 
 a {
   color: #fff;
+  -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+a:focus {
+  outline: none;
 }
 
 main img {
@@ -165,12 +170,15 @@ main {
   flex-direction: row-reverse !important;
 }
 
+.padding {
+  padding: 5rem 3.5rem 0;
+}
+
 .about_us,
 .gallery,
 .services,
 .testimonials,
 .book_appointment {
-  padding: 5rem 3.5rem 0;
   width: 100%;
 }
 
@@ -180,7 +188,7 @@ main {
 .gallery h2,
 .book_appointment h2 {
   font-size: 3.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .about_us p,
@@ -360,7 +368,7 @@ main {
 
 .book_appointment .book-container {
   flex-direction: row-reverse;
-  margin-top: 5rem;
+  margin-top: 3rem;
   align-items: flex-start;
 }
 
@@ -511,6 +519,8 @@ input[type="submit"]:hover {
   .gallery .gallery-grid {
     grid-template-columns: repeat(2, auto);
   }
+  .gallery .gallery-grid #gallery-image-1,
+  .gallery .gallery-grid #gallery-image-2,
   .gallery .gallery-grid #gallery-image-3,
   .gallery .gallery-grid #gallery-image-5 {
     grid-column: span 2;
@@ -519,6 +529,15 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 900px) {
+  .padding {
+    padding: 5rem 2rem 0;
+  }
+  header {
+    padding: 2rem 2rem;
+  }
+  main {
+    padding: 10rem 2rem 0;
+  }
   header .menu-icon,
   .header .close-icon {
     display: block;
@@ -558,7 +577,13 @@ input[type="submit"]:hover {
 
   .about_us {
     flex-direction: column !important;
+    text-align: left;
+  }
+  .about_us h2 {
     text-align: center;
+  }
+  .about_us img {
+    height: auto;
   }
 
   .services .container {
@@ -570,11 +595,29 @@ input[type="submit"]:hover {
   }
   .gallery img {
     width: 100%;
-    height: 100%;
+    height: auto;
+  }
+  .testimonials {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .testimonials h2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .carousel-track {
+    padding: 1.5rem;
+  }
+
+  .testimonial blockquote {
+    padding: 1.5rem;
   }
   .book_appointment .book-container {
     flex-direction: column !important;
     text-align: left;
     gap: 3rem;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
   }
 }
