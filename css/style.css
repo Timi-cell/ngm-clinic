@@ -529,7 +529,11 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 900px) {
-  h2 {
+  .about_us h2,
+  .services h2,
+  .testimonials h2,
+  .gallery h2,
+  .book_appointment h2 {
     font-size: 2.8rem !important;
   }
   .padding {
