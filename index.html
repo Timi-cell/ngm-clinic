@@ -11,19 +11,48 @@
     ></script>
   </head>
   <body>
+    <button
+      onclick="TopFunc()"
+      class="arrow-up"
+      id="scrollTopBtn"
+      title="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- header section -->
-    <header class="flexing">
+    <header class="flexing mobile-header">
       <a href="#">
         <h1>NGMC</h1>
       </a>
-      <nav class="flexing">
-        <a href="#">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a id="booking" href="#book_appointment">Book Appointment</a>
-      </nav>
+      <!-- Mobile menu icon -->
+      <div class="menu-icon" id="menuIcon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Overlay menu -->
+      <div class="menu-content mobile-menu" id="menu">
+        <div class="close-icon" id="closeMenu">
+          <i class="fas fa-times"></i>
+        </div>
+        <nav>
+          <ul class="flexing menu-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li>
+              <a
+                id="booking"
+                class="book-link mobile-book"
+                href="#book_appointment"
+                >Book Appointment</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- hero & banner section -->
@@ -35,7 +64,7 @@
           Clinic
         </h2>
         <p>Providing support to ensure healthy pregnancies</p>
-        <button>Book Appointment</button>
+        <button><a href="#book_appointment">Book Appointment</a></button>
       </section>
 
       <img src="./images/header.svg" alt="Banner Image" />
@@ -99,6 +128,7 @@
             <h3>Online Booking</h3>
             <p>
               Schedule visits easily through our user-friendly online platform.
+              Booking an appointment is just a few clicks away.
             </p>
           </article>
         </div>
@@ -110,15 +140,31 @@
       <div class="gallery bg dim-dark-color">
         <h2>Gallery</h2>
         <div class="gallery-grid">
-          <img src="./images/gallery/1.jpg" alt="Gallery Image 1" />
-          <img src="./images/gallery/2.jpg" alt="Gallery Image 2" />
-          <img src="./images/gallery/3.jpg" alt="Gallery Image 3" />
+          <img
+            src="./images/gallery/1.jpg"
+            alt="Gallery Image 1"
+            id="gallery-image-1"
+          />
+          <img
+            src="./images/gallery/2.jpg"
+            alt="Gallery Image 2"
+            id="gallery-image-2"
+          />
+          <img
+            src="./images/gallery/3.jpg"
+            alt="Gallery Image 3"
+            id="gallery-image-3"
+          />
           <img
             src="./images/gallery/4.jpg"
             id="gallery-image-4"
             alt="Gallery Image 4"
           />
-          <img src="./images/gallery/5.jpg" alt="Gallery Image 5" />
+          <img
+            src="./images/gallery/5.jpg"
+            alt="Gallery Image 5"
+            id="gallery-image-5"
+          />
         </div>
       </div>
     </section>

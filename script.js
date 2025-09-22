@@ -52,3 +52,33 @@ window.addEventListener("scroll", () => {
     .querySelector("header")
     .classList.toggle("window-scroll", window.scrollY > 0);
 });
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show/hide button on scroll
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when button clicked
+scrollTopBtn.addEventListener("click", function () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
+});
+
+
+// // Conditional Statements
+// if (temp > 30) {
+//   console.log("Hot");
+// } else if (temp > 20) {
+//   console.log("Warm");
+// } else {
+//   console.log("Cool");
+// }
+
+// // Ternary Operator
+// let status = age >= 18 ? "Adult" : "Minor";

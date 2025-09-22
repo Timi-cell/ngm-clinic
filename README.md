@@ -1,1 +1,3 @@
-Welcome to the official landing page for NextGen Medics Clinic
+Welcome to the official landing page of NextGen Medics Clinic.
+
+We specialize in providing support to ensure healthy pregnancies.

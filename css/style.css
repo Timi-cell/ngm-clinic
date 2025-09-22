@@ -16,6 +16,39 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+section {
+  scroll-margin-top: 5rem;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #480ca8;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.arrow-up:hover {
+  background-color: #fc5185;
+}
+.arrow-up:active {
+  transform: scale(0.95);
+}
+
+.arrow-up i {
+  color: #fff;
+  font-size: 2.4rem;
+}
+
 .flexing {
   display: flex;
   justify-content: space-between;
@@ -33,6 +66,18 @@ header {
   height: auto;
 }
 
+header h1 {
+  font-size: 3.5rem;
+}
+header li {
+  list-style: none;
+}
+
+header .menu-icon,
+header .close-icon {
+  display: none;
+}
+
 header.window-scroll {
   background: #fff;
 }
@@ -46,13 +91,13 @@ header.window-scroll a {
 header.window-scroll #booking {
   background-color: #480ca8;
   color: #fff;
+  transition: all 0.2s ease-in;
 }
-header h1 {
-  font-size: 3.5rem;
+header.window-scroll #booking:hover {
+  background-color: #fc5185;
+  /* color: #fff; */
 }
-section {
-  scroll-margin-top: 5rem;
-}
+
 #booking {
   background-color: #fc5185;
   color: #fff;
@@ -186,7 +231,7 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   /* height: fit-content; */
-  transition: all 500ms ease-in-out;
+  transition: all 0.2s ease-in;
 }
 .services .container article:hover {
   background: #fc5185;
@@ -206,6 +251,7 @@ main {
   /* grid-template-rows: repeat(2, 1fr); */
   gap: 1rem;
 }
+
 .gallery .gallery-grid #gallery-image-4 {
   grid-column: span 2;
   /* grid-row: span 2; */
@@ -231,7 +277,6 @@ main {
   font-size: 1.8rem;
   line-height: 1.6;
   font-style: italic;
-  position: relative;
   padding: 2rem;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -425,6 +470,10 @@ input[type="submit"]:hover {
   margin-top: 10rem;
 }
 
+/* -----------End of the Footer Section-------------- */
+
+/* Media Queries */
+
 @media screen and (max-width: 1110px) {
   .footer--column {
     display: flex;
@@ -458,6 +507,71 @@ input[type="submit"]:hover {
     text-align: center;
     width: 100%;
   }
+
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+  .gallery .gallery-grid #gallery-image-3,
+  .gallery .gallery-grid #gallery-image-5 {
+    grid-column: span 2;
+    width: 100%;
+  }
 }
 
-/* -----------End of the Footer Section-------------- */
+@media screen and (max-width: 900px) {
+  header .menu-icon,
+  .header .close-icon {
+    display: block;
+  }
+
+  header .menu-content {
+    display: none;
+  }
+  .mobile-header {
+    flex-direction: row !important;
+  }
+  .mobile-header .menu-icon i {
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
+
+  .flexing {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  main img,
+  .intro {
+    width: 100%;
+  }
+
+  .about_us #about_us_content,
+  .about_us img,
+  .book_appointment .form-container,
+  .book_appointment img {
+    width: 100%;
+  }
+
+  .about_us {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(1, auto);
+  }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+  .book_appointment .book-container {
+    flex-direction: column !important;
+    text-align: left;
+    gap: 3rem;
+  }
+}
