@@ -95,6 +95,11 @@ links.forEach((link) => {
   });
 });
 
+menu.addEventListener("click", () => {
+  menu.style.height = "0%";
+  menu.style.display = "none";
+});
+
 window.addEventListener("resize", () => {
   if (window.innerWidth > 900) {
     menu.style.height = "";
