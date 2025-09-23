@@ -70,6 +70,37 @@ scrollTopBtn.addEventListener("click", function () {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, Opera
 });
 
+const menu = document.getElementById("menu");
+
+/* Open */
+let openBtn = document.getElementById("openBtn");
+openBtn.addEventListener("click", () => {
+  menu.style.height = "100%";
+  menu.style.display = "block";
+});
+
+/* Close */
+let closeBtn = document.getElementById("closeBtn");
+closeBtn.addEventListener("click", () => {
+  menu.style.height = "0%";
+  menu.style.display = "none";
+});
+
+// Close Mobile Nav after pressing a link
+const links = document.querySelectorAll("#menu a");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.style.height = "0%";
+    menu.style.display = "none";
+  });
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    menu.style.height = "";
+    menu.style.display = "";
+  }
+});
 
 // // Conditional Statements
 // if (temp > 30) {

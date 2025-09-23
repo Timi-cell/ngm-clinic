@@ -11,7 +11,11 @@ html {
   user-select: none;
   scroll-behavior: smooth;
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -74,8 +78,8 @@ header li {
   list-style: none;
 }
 
-header .menu-icon,
-header .close-icon {
+.mobile-header .menu-icon,
+.mobile-header .menu-content .close-icon {
   display: none;
 }
 
@@ -544,28 +548,73 @@ input[type="submit"]:hover {
     padding: 5rem 2rem 0;
   }
   header {
-    padding: 2rem 2rem;
+    padding: 2rem 2.5rem !important;
   }
   main {
     padding: 10rem 2rem 0;
   }
-  header .menu-icon,
-  .header .close-icon {
-    display: block;
-  }
-  header.window-scroll .menu-icon {
-    color: #480ca8;
-  }
 
-  header .menu-content {
-    display: none;
-  }
   .mobile-header {
     flex-direction: row !important;
   }
   .mobile-header .menu-icon i {
+    color: #fff;
+  }
+  header.window-scroll .menu-icon i {
+    color: #0c031b;
+  }
+  .mobile-header .menu-icon i,
+  .mobile-header .close-icon i {
     font-size: 3.5rem;
     cursor: pointer;
+  }
+
+  .mobile-header .menu-icon {
+    display: block !important;
+  }
+
+  .mobile-header .menu-content {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    background: #fff;
+    overflow-y: scroll;
+    transition: height 0.4s ease;
+  }
+
+  .mobile-header .menu-content .mobile-menu {
+    position: fixed;
+    /* color: #000 !important; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    gap: 3.5rem;
+    flex-direction: column !important;
+    padding-bottom: 2rem;
+  }
+  .mobile-header .menu-content .mobile-menu a {
+    color: #000 !important;
+  }
+  .mobile-header .menu-content .mobile-menu #booking {
+    background-color: #480ca8;
+    color: #fff !important;
+    transition: all 0.2s ease-in;
+  }
+  .mobile-header .menu-content .close-icon {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    color: #000 !important;
+    right: 3rem;
+  }
+
+  .mobile-header .menu-content {
+    display: none;
   }
 
   .flexing {

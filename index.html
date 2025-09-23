@@ -13,6 +13,7 @@
     ></script>
   </head>
   <body>
+    <!-- Scroll to top button -->
     <button class="arrow-up" id="scrollTopBtn" title="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
@@ -23,17 +24,17 @@
         <h1>NGMC</h1>
       </a>
       <!-- Mobile menu icon -->
-      <div class="menu-icon" id="menuIcon">
+      <div class="menu-icon" id="openBtn">
         <i class="fas fa-bars"></i>
       </div>
 
       <!-- Overlay menu -->
-      <div class="menu-content mobile-menu" id="menu">
-        <div class="close-icon" id="closeMenu">
+      <div class="menu-content" id="menu">
+        <div class="close-icon" id="closeBtn">
           <i class="fas fa-times"></i>
         </div>
         <nav>
-          <ul class="flexing menu-links">
+          <ul class="flexing mobile-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
@@ -68,7 +69,7 @@
     </main>
 
     <!-- about us section -->
-    <section id="about" data-aos="zoom-in">
+    <section id="about">
       <article class="flexing bg about_us padding dim-dark-color">
         <aside id="about_us_content">
           <h2>About Us</h2>
@@ -295,7 +296,11 @@
               <input type="submit" value="Book Appointment" />
             </form>
           </div>
-          <img src="./images/booking.jpg" data-aos="zoom-in" alt="Calendar Image" />
+          <img
+            src="./images/booking.jpg"
+            data-aos="zoom-in"
+            alt="Calendar Image"
+          />
         </div>
       </div>
     </section>
@@ -303,7 +308,7 @@
     <!-- footer section -->
     <footer class="footer">
       <div class="footer--content footer--column">
-        <div class="first">
+        <div data-aos="fade-up" class="first">
           <a href="#">
             <h1>NGMC</h1>
           </a>
@@ -323,7 +328,7 @@
           </ul>
         </div>
         <div class="fourth">
-          <div class="icons">
+          <div data-aos="fade-up" class="icons">
             <a
               href="https://www.linkedin.com/company/nextgenmedics/"
               target="_blank"
@@ -340,7 +345,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- JS Script file -->
     <script src="./script.js"></script>
+
+    <!-- Animate on Scroll -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
