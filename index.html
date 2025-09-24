@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/ngmc.jpg" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Animate On Scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Font Awesome Icons -->
     <script
       src="https://kit.fontawesome.com/8725ddc164.js"
       crossorigin="anonymous"
     ></script>
+    <!-- SweetAlert2 CSS and JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <!-- Scroll to top button -->
@@ -62,7 +70,7 @@
           Clinic
         </h2>
         <p>Providing support to ensure healthy pregnancies</p>
-        <button><a href="#book_appointment">Book Appointment</a></button>
+        <a href="#book_appointment"><button>Book Appointment</button></a>
       </section>
 
       <img src="./images/header.svg" data-aos="fade-down" alt="Banner Image" />
@@ -236,10 +244,9 @@
         <h2>Book Appointment</h2>
         <div class="flexing book-container">
           <div class="form-container">
-            <form>
+            <form id="form">
               <label for="fname">First Name</label>
               <input
-                required
                 type="text"
                 id="fname"
                 name="firstname"
@@ -247,7 +254,6 @@
               />
               <label for="lname">Last Name</label>
               <input
-                required
                 type="text"
                 id="lname"
                 name="lastname"
@@ -255,7 +261,6 @@
               />
               <label for="email">Email</label>
               <input
-                required
                 type="email"
                 id="email"
                 name="email"
@@ -263,7 +268,6 @@
               />
               <label for="phone">Phone Number</label>
               <input
-                required
                 type="number"
                 id="phone"
                 name="phone"
@@ -271,25 +275,22 @@
               />
               <label for="date">Choose Date</label>
               <input
-                required
                 type="date"
                 id="date"
                 name="date"
-                placeholder="Select a date..."
+                placeholder="Your preferred date..."
               />
               <label for="time">Choose Time</label>
               <input
-                required
                 type="time"
                 id="time"
                 name="time"
-                placeholder="Select a time..."
+                placeholder="Your preferred time..."
               />
-              <label for="subject">Reason For Appointment</label>
+              <label for="reason">Reason For Appointment</label>
               <textarea
-                required
-                id="subject"
-                name="subject"
+                id="reason"
+                name="reason"
                 placeholder="Let us know why you're booking this appointment..."
                 style="height: 200px"
               ></textarea>

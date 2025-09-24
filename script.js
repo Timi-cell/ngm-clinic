@@ -30,6 +30,7 @@
 //   slides[slideIndex - 1].style.display = "block";
 //   dots[slideIndex - 1].className += " active";
 // }
+
 let slideIndex = 0;
 showSlides();
 
@@ -51,6 +52,58 @@ window.addEventListener("scroll", () => {
   document
     .querySelector("header")
     .classList.toggle("window-scroll", window.scrollY > 0);
+});
+
+let form = document.getElementById("form");
+let formElements = form.elements;
+let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const firstName = formElements.firstname.value.trim();
+  const lastName = formElements.lastname.value.trim();
+  const email = formElements.email.value.trim();
+  const phone = formElements.phone.value.trim();
+  const date = formElements.date.value.trim();
+  const time = formElements.time.value.trim();
+  const reason = formElements.reason.value.trim();
+
+  if (
+    !firstName ||
+    !lastName ||
+    !email ||
+    !phone ||
+    !date ||
+    !time ||
+    !reason
+  ) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill in all fields to ensure your appointment gets booked!",
+      confirmButtonText: "OK",
+    });
+    return;
+  }
+
+  if (regex.test(email)) {
+    // If validation passes:
+    Swal.fire({
+      icon: "success",
+      title: "Appointment Booked!",
+      html: `Thanks for booking an appointment with us, ${firstName} ${lastName}.<br>We'll reach out to you soon!`,
+      confirmButtonText: "OK",
+    });
+    form.reset();
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please fill in a valid email address!",
+      confirmButtonText: "OK",
+    });
+    return;
+  }
 });
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
