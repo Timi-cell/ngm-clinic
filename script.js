@@ -91,7 +91,7 @@ form.addEventListener("submit", (e) => {
     Swal.fire({
       icon: "success",
       title: "Appointment Booked!",
-      html: `Thanks for booking an appointment with us, ${firstName} ${lastName}.<br>We'll reach out to you soon!`,
+      html: `Thanks for booking an appointment with us, ${firstName} ${lastName}.<br><br>We'll reach out to you soon!`,
       confirmButtonText: "OK",
     });
     form.reset();

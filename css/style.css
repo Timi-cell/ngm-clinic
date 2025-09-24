@@ -651,7 +651,11 @@ input[type="submit"]:hover {
   .book_appointment img {
     width: 100%;
   }
-
+  input[type="date"],
+  input[type="time"] {
+    width: 50%;
+    display: block;
+  }
   .about_us {
     flex-direction: column !important;
     text-align: left;
