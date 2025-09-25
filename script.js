@@ -128,37 +128,40 @@ const menu = document.getElementById("menu");
 /* Open */
 let openBtn = document.getElementById("openBtn");
 openBtn.addEventListener("click", () => {
-  menu.style.height = "100%";
-  menu.style.display = "block";
+  menu.classList.add("active");
 });
 
 /* Close */
 let closeBtn = document.getElementById("closeBtn");
 closeBtn.addEventListener("click", () => {
-  menu.style.height = "0%";
-  menu.style.display = "none";
+  menu.classList.remove("active");
 });
 
 // Close Mobile Nav after pressing a link
-const links = document.querySelectorAll("#menu a");
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.style.height = "0%";
-    menu.style.display = "none";
-  });
-});
 
-menu.addEventListener("click", () => {
-  menu.style.height = "0%";
-  menu.style.display = "none";
-});
+// Define media query in JavaScript
+const mediaQuery = window.matchMedia("(max-width: 900px)");
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 900) {
-    menu.style.height = "";
-    menu.style.display = "";
+// Function to run when query matches
+function handleMediaQuery(e) {
+  if (e.matches) {
+    const links = document.querySelectorAll("#menu a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+    menu.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
   }
-});
+}
+
+// Initial check
+handleMediaQuery(mediaQuery);
+
+// Listen for changes
+mediaQuery.addEventListener("change", handleMediaQuery);
 
 // // Conditional Statements
 // if (temp > 30) {

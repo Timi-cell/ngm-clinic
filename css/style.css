@@ -103,13 +103,12 @@ header li {
 header.window-scroll {
   background: #fff;
 }
-header.window-scroll h1 {
-  color: #0c031b;
-}
 
+header.window-scroll h1,
 header.window-scroll a {
   color: #0c031b;
 }
+
 header.window-scroll #booking {
   background-color: #480ca8;
   color: #fff;
@@ -602,6 +601,15 @@ input[type="submit"]:hover {
     transition: height 0.4s ease;
   }
 
+  .mobile-header #menu {
+    display: none;
+    /* height: 0%; */
+  }
+  .mobile-header #menu.active {
+    display: block;
+    height: 100%;
+  }
+
   .mobile-header .menu-content .mobile-menu {
     position: fixed;
     /* color: #000 !important; */
@@ -628,10 +636,6 @@ input[type="submit"]:hover {
     top: 2rem;
     color: #000 !important;
     right: 3rem;
-  }
-
-  .mobile-header .menu-content {
-    display: none;
   }
 
   .flexing {
